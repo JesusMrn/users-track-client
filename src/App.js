@@ -10,7 +10,8 @@ import { Navbar } from './app/Navbar';
 import { UsersList } from './features/users/UsersList';
 import { AddUserForm } from './features/users/AddUserForm';
 import { ConnectionsList } from './features/connections/ConnectionsList';
-import { AddConnectionsForm } from './features/connections/AddConnectionsForm'
+import { AddConnectionsForm } from './features/connections/AddConnectionsForm';
+import { FriendsList} from './features/friends/FriendsList';
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
               <ConnectionsList></ConnectionsList>
             </React.Fragment>
           )} />
+          <Route exact path="/friends" component={FriendsList}></Route>
           <Redirect to="/" />
         </Switch>
       </div>
