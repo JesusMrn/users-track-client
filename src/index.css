@@ -44,6 +44,9 @@ nav a:active {
   border-radius: 4px;
   color: white !important;
   background: #a75454;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 nav a:first-of-type {
