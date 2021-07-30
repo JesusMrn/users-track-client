@@ -4,9 +4,10 @@ Client side of an user-track app
 ## **Previous steps**
 Don't forget to `npm i` before start.
 
-To start the server run `npm start`.
-
+To start the app run `npm start`.
 This command will deploy the app in your localhost port 8080, you can change it in the package.json file, check scripts and change port in 'start'.
+
+To test the app run `npm start`.
 
 ## **Tabs**
 
