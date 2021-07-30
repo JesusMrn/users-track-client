@@ -4,15 +4,15 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
@@ -79,6 +79,7 @@ section {
   margin-left: auto;
   margin-right: auto;
   padding: 0 1.5rem;
+  padding-bottom: 2rem;
 }
 
 section h1 {
@@ -107,7 +108,6 @@ button:disabled:hover {
 .toggle {
   padding-bottom: 0.75rem;
 }
-
 
 /* https://projects.lukehaas.me/css-loaders/ , Loader #3 */
 .loader {
