@@ -10,7 +10,8 @@ export const ConnectionsList = () => {
 
   const renderedConnections = connections.map((connection, index) => (
     <li key={index}>
-      {connection.user} is friend with {connection.userFriendWith} {connection.isMutual === 1 ? "and is mutual" : "bit it isn't mutual"}
+      {connection.user} is friend with {connection.userFriendWith}
+      {connection.isMutual === 1 ? " and is mutual" : " but it isn't mutual"}
     </li>
   ));
 

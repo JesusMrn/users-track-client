@@ -29,7 +29,7 @@ export const AddConnectionsForm = () => {
             id: 1,
             user: userName,
             userFriendWith: userFriendWithName,
-            isMutual: isMutual? 1 : 0,
+            isMutual: isMutual ? 1 : 0,
           })
         );
         unwrapResult(resultAction);

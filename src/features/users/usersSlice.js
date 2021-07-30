@@ -2,28 +2,26 @@ import {
   createSlice,
   createAsyncThunk,
   createEntityAdapter,
-} from '@reduxjs/toolkit'
-import { client } from '../../api/client'
+} from "@reduxjs/toolkit";
 
-const usersAdapter = createEntityAdapter()
+import { client } from "../../api/client";
 
-const initialState = usersAdapter.getInitialState()
+const usersAdapter = createEntityAdapter();
 
-export const fetchUsers = createAsyncThunk('users/fetchUsers', async () => {
-  const response = await client.get('http://localhost:3000/users');
+const initialState = usersAdapter.getInitialState();
+
+export const fetchUsers = createAsyncThunk("users/fetchUsers", async () => {
+  const response = await client.get("http://localhost:3000/users");
   return response;
 });
 
-export const addNewUser = createAsyncThunk(
-  'users/addNewUser',
-  async (user) => {
-    const response = await client.post('http://localhost:3000/users', user);
-    return response;
-  }
-);
+export const addNewUser = createAsyncThunk("users/addNewUser", async (user) => {
+  const response = await client.post("http://localhost:3000/users", user);
+  return response;
+});
 
 const usersSlice = createSlice({
-  name: 'users',
+  name: "users",
   initialState,
   reducers: {},
   extraReducers: {
@@ -34,6 +32,6 @@ const usersSlice = createSlice({
 
 export default usersSlice.reducer;
 
-export const {
-  selectAll: selectAllUsers,
-} = usersAdapter.getSelectors((state) => state.users);
+export const { selectAll: selectAllUsers } = usersAdapter.getSelectors(
+  (state) => state.users
+);

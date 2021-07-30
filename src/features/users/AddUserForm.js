@@ -1,17 +1,16 @@
-import React, { useState } from 'react'
-import { useDispatch } from 'react-redux'
-import { unwrapResult } from '@reduxjs/toolkit'
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { unwrapResult } from "@reduxjs/toolkit";
 
-import { addNewUser } from './usersSlice'
+import { addNewUser } from "./usersSlice";
 
 export const AddUserForm = () => {
-  const [userName, setUserName] = useState('');
-  const [errorMessage, setErrorMessage] = useState('');
+  const [userName, setUserName] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
 
   const dispatch = useDispatch();
 
   const onUserNameChanged = (e) => setUserName(e.target.value);
-
 
   const canAdd = userName;
 
@@ -19,17 +18,17 @@ export const AddUserForm = () => {
     if (canAdd) {
       try {
         const resultAction = await dispatch(
-            addNewUser({ id: 1, name: userName })
+          addNewUser({ id: 1, name: userName })
         );
         unwrapResult(resultAction);
-        setUserName('');;
-        setErrorMessage('');
+        setUserName("");
+        setErrorMessage("");
       } catch (err) {
-        console.error('Failed add User: ', err)
+        console.error("Failed add User: ", err);
         setErrorMessage(err.message);
       }
     }
-  }
+  };
 
   return (
     <section>
@@ -43,11 +42,16 @@ export const AddUserForm = () => {
           value={userName}
           onChange={onUserNameChanged}
         />
-        { errorMessage &&  <div className="error"> {errorMessage} </div>}
-        <button className="button" type="button" onClick={onAddUserClicked} disabled={!canAdd}>
+        {errorMessage && <div className="error"> {errorMessage} </div>}
+        <button
+          className="button"
+          type="button"
+          onClick={onAddUserClicked}
+          disabled={!canAdd}
+        >
           Add User
         </button>
       </form>
     </section>
-  )
-}
+  );
+};
